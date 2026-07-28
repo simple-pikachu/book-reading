@@ -3,7 +3,8 @@
 > 书籍：姜承尧，机械工业出版社，2013-05（ISBN 9787111422068）  
 > 书中基线：**MySQL 5.6 / InnoDB 1.2.x 时代**  
 > 对照目标：**MySQL 8.0.34**  
-> 用途：边读原书边对照，区分「仍有效的原理」与「已过时的写法/参数/工具」
+> 用途：边读原书边对照，区分「仍有效的原理」与「已过时的写法/参数/工具」  
+> **分章精读笔记（含原文 + 新写法）**：[notes/README.md](./notes/README.md)
 
 ---
 
@@ -13,9 +14,10 @@
 |------|------|
 | 原理可留 | B+ 树、MVCC、redo/undo、锁算法、Checkpoint、Doublewrite 等**机制叙事**大多仍成立 |
 | 写法要换 | 参数名、文件布局、INFORMATION_SCHEMA 表名、备份工具、认证插件、默认字符集等要按 8.0.34 改 |
-| 证据来源 | 官方 [What Is New in MySQL 8.0](https://dev.mysql.com/doc/refman/8.0/en/mysql-nutshell.html)、[8.0.34 Release Notes](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-34.html)；本书 PDF 为扫描件，无法逐页 OCR 引原文，条目按**目录主题 + 5.6 时代通行写法**归纳 |
+| 精读路径 | 需要「原文 + 可执行新写法」时，优先打开 [notes/](./notes/) 对应章节；本文件作速查 |
+| 证据来源 | 官方 [What Is New in MySQL 8.0](https://dev.mysql.com/doc/refman/8.0/en/mysql-nutshell.html)、[8.0.34 Release Notes](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-34.html)；分章笔记原文摘自第2版公开书摘（本地 PDF 为扫描件未 OCR） |
 
-**阅读建议**：先读原书某一节建立模型，再翻本文件同章节「过时点」，最后用本机 `SELECT VERSION();`（期望 `8.0.34`）验证参数/表是否仍存在。
+**阅读建议**：原书 → `notes/0N-….md` → 本对照表扫漏 → `SELECT VERSION();` 验证。
 
 ---
 
